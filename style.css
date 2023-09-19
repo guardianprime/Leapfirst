@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap");
+
+/* || RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+/* || VARIABLES */
+:root {
+  /* \\ FONTS */
+  --SMALL-HEADERS-FONT: "Dancing Script", san-serif;
+  --HEADER-FONT: "Open Sans", san-serif;
+  --FOOTER-FONT: Verdana, Geneva, Tahoma, sans-serif;
+  --FS: clamp(1rem, 2.2vh, 1.5rem);
+  --DIV-HEADER-FS: 3rem;
+  --ATTENTION-HEADER-FS: 2.5rem;
+
+  /* \\ COLORS */
+  --BACKGROUND-COLOR: #f2f2f2;
+  --HEADER-BG-COLOR: #fff;
+  --LINK-COLOR: #000;
+  --ICON-COLOR: blue;
+  --SECTION-BG-COLOR: white;
+
+  /* \\ PADDING */
+  --HEADER-PD: 20px;
+  --GENERAL-PADDING: 30px;
+
+  /* MARGIN */
+  --CENTER-CONTAINER: 10px auto;
+  --MARGIN-TOP: 20px;
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+.display-block {
+  display: block;
+  background-color: #1a1a1a5a;
+}
+
+/* /////////////////// */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: var(--BACKGROUND-COLOR);
+  font-size: var(--FS);
+  min-height: 100vh;
+}
+
+header {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--HEADER-BG-COLOR);
+  padding-top: var(--HEADER-PD);
+  box-shadow: 0 6px 5px -5px #333;
+  z-index: 100;
+  position: sticky;
+  width: 100%;
+  top: 0px;
+}
+
+main {
+  background-color: var(--SECTION-BG-COLOR);
+}
+
+h2 {
+  font-size: var(--ATTENTION-HEADER-FS);
+  font-family: var(--SMALL-HEADERS-FONT);
+}
+
+/* || LOGO OR WEBSITE NAME STYLING */
+.logo {
+  width: max-content;
+}
+
+.main__logo {
+  font-size: 3em;
+  font-weight: 700;
+  color: blue;
+  text-shadow: 2px 2px 5px #333;
+}
+/* ///////////////////////////////// */
+
+/* STYLING FOR ALL THE LINKS ON THE PAGE */
+.main__ul {
+  list-style-type: none;
+}
+
+.main__ul a {
+  text-decoration: none;
+  color: var(--LINK-COLORs);
+}
+
+/* ||  ???????? NAV STYLING ?????????? */
+.main__first-nav {
+  justify-content: space-between;
+  display: flex;
+  width: 95%;
+  margin: 0px auto;
+}
+
+/* STYLE FOR THE login and e.tc first ul */
+
+.list-1 li i {
+  margin-right: 2px;
+}
+/* ------------------------------ */
+.list-1 {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.list-1 li {
+  padding: var(--HEADER-PD);
+  font-weight: 300;
+  font-size: larger;
+}
+
+.list-2 {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: var(--HEADER-PD) 0px;
+  width: 95%;
+  margin: auto;
+}
+
+/* ??????????????????????????????? */
+
+/* || HOVER STYLING */
+.nav__ul a:hover,
+.nav__ul a:focus {
+  color: #333;
+  border-bottom: 2px solid var(--LINK-COLOR);
+}
+/* //////////////////////// */
+
+/* FOOTER AND ITS CONTENTS */
+footer {
+  width: 100%;
+  height: 100vh;
+  padding: var(--GENERAL-PADDING);
+  outline: 5px solid red;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-areas:
+    "LG . ."
+    "FT-1 FT-2 FT-2"
+    "LT LT LT";
+}
+
+.footer__section {
+  font-family: var(--FOOTER-FONT);
+}
+.lg {
+  grid-area: LG;
+  outline: 2px solid red;
+}
+
+.ft-1 {
+  grid-area: FT-1;
+  outline: 2px solid red;
+}
+
+.footer__last {
+  grid-area: LT;
+  outline: 2px solid red;
+}
+
+.ft-2 {
+  grid-area: FT-2;
+  outline: 2px solid red;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__img {
+  width: 200px;
+  height: 160px;
+}
+
+.footer__img-div {
+  border: 5px solid blueD;
+}
+/* ////////////////////////////// */
+
+/* || HERO SECTION */
+
+.hero__img {
+  width: 100%;
+  height: auto;
+}
+
+.hero {
+  height: 75vh;
+  outline: 2px solid red;
+  position: relative;
+}
+
+.hero__div {
+  width: 25%;
+  height: 85%;
+  padding: var(--HEADER-PD);
+  position: absolute;
+  display: inline-block;
+  top: 30px;
+  left: 20px;
+  background-color: var(--HEADER-BG-COLOR);
+  outline: 5px solid blue;
+}
+
+.hero__h1 {
+  font-size: var(--DIV-HEADER-FS);
+}
+
+.hero__h4 {
+  font-size: larger;
+}
+
+.review {
+  font-size: larger;
+  font-weight: 500;
+}
+
+.container-icon {
+  display: flex;
+  justify-content: space-around;
+  margin-top: var(--MARGIN-TOP);
+}
+
+.container-icon i {
+  color: var(--ICON-COLOR);
+}
+
+.author {
+  margin-top: 20px;
+}
+
+/* |||||||||||||||||||||| */
+
+/* || HERO2 AND HERO4 SECTION */
+
+.hero2 {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 50px;
+  width: 90%;
+  height: 120vh;
+  margin: var(--CENTER-CONTAINER);
+}
+
+.hero2__img {
+  width: 100%;
+}
+
+.sidebar {
+  background-color: aquamarine;
+  padding: var(--HEADER-PD);
+  height: 75%;
+}
+
+.sidebar--container {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+
+.sidebar__div {
+  height: max-content;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.sidebar__div div {
+  width: 60%;
+  height: max-content;
+  padding-top: 10px;
+}
+
+.text {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.sidebar__img {
+  width: 130px;
+  height: 100px;
+}
+
+/* || DUMMY CONTAINERS TO FILL THE PAGE */
+.advertisement {
+  height: 120px;
+  position: absolute;
+  top: 0;
+}
+
+.dummy {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  margin-top: 30px;
+  border: 5px solid white;
+}
+
+/* ||| ++++++ HERO 3 ++++++ */
+.tabs__h2 {
+  margin-top: var(--MARGIN-TOP) var(--MARGIN-TOP);
+  padding: var(--GENERAL-PADDING);
+}
+
+.tabs__container {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: var(--CENTER-CONTAINER);
+}
+
+.tabs__items {
+  width: 30%;
+  height: auto;
+}
+
+.tabs__container img {
+  width: 100%;
+}
+/* ++++++++++++++++++++++++++ */
+
+/* HERO 4 */
+#hero4 {
+  background-color: cornflowerblue;
+  padding: var(--GENERAL-PADDING);
+}
+
+.hero4__container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  width: 90%;
+  height: 120vh;
+  margin: var(--CENTER-CONTAINER);
+}
+
+/* |||||| HERO 5 ||||||| */
+#hero5 figure {
+  width: 500px;
+  height: 500px;
+}
+
+.hero5__img {
+  width: 1500px;
+  height: 500px;
+}
+/* |||||||||||||||||||||| */
+
+/* ||||| HERO 6 |||||||*/
+
+/* ||||||||||||||||||||| */
