@@ -17,7 +17,7 @@ button {
 /* || VARIABLES */
 :root {
   /* \\ FONTS */
-  --SMALL-HEADERS-FONT: "Dancing Script", san-serif;
+  --SMALL-HEADERS-FONT: san-serif;
   --HEADER-FONT: "Open Sans", san-serif;
   --FOOTER-FONT: Verdana, Geneva, Tahoma, sans-serif;
   --FS: clamp(1rem, 2.2vh, 1.5rem);
@@ -31,6 +31,9 @@ button {
   --ICON-COLOR: blue;
   --SECTION-BG-COLOR: white;
 
+  /* || TEXT COLOR */
+  --FADE: #737373;
+
   /* \\ PADDING */
   --HEADER-PD: 20px;
   --GENERAL-PADDING: 30px;
@@ -38,6 +41,9 @@ button {
   /* MARGIN */
   --CENTER-CONTAINER: 10px auto;
   --MARGIN-TOP: 20px;
+
+  /* \\ BORDER RADIUS */
+  --GENERAL-BR: 10px;
 }
 
 /* || UTILITY CLASSES */
@@ -52,6 +58,10 @@ button {
 
 .center {
   text-align: center;
+}
+
+.left {
+  text-align: left;
 }
 
 .display-block {
@@ -169,7 +179,6 @@ footer {
   width: 100%;
   height: 100vh;
   padding: var(--GENERAL-PADDING);
-  outline: 5px solid red;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 4fr 1fr;
@@ -217,26 +226,26 @@ footer {
 /* || HERO SECTION */
 
 .hero__img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
 .hero {
   height: 75vh;
-  outline: 2px solid red;
   position: relative;
 }
 
 .hero__div {
   width: 25%;
-  height: 85%;
+  max-width: 350px;
+  height: auto;
   padding: var(--HEADER-PD);
   position: absolute;
   display: inline-block;
-  top: 30px;
+  top: 20px;
   left: 20px;
   background-color: var(--HEADER-BG-COLOR);
-  outline: 5px solid blue;
+  border-radius: var(--GENERAL-BR);
 }
 
 .hero__h1 {
@@ -245,6 +254,11 @@ footer {
 
 .hero__h4 {
   font-size: larger;
+  color: var(--FADE);
+}
+
+.time {
+  color: var(--FADE);
 }
 
 .review {
@@ -264,6 +278,7 @@ footer {
 
 .author {
   margin-top: 20px;
+  color: var(--FADE);
 }
 
 /* |||||||||||||||||||||| */
@@ -272,7 +287,7 @@ footer {
 
 .hero2 {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1.5fr;
   gap: 50px;
   width: 90%;
   height: 120vh;
@@ -280,7 +295,7 @@ footer {
 }
 
 .hero2__img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .sidebar {
@@ -295,6 +310,11 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   column-gap: 10px;
+}
+
+.hero2__author {
+  margin-top: 10px;
+  color: var(--FADE);
 }
 
 .sidebar__div {
@@ -318,23 +338,8 @@ footer {
 }
 
 .sidebar__img {
-  width: 130px;
+  width: 100px;
   height: 100px;
-}
-
-/* || DUMMY CONTAINERS TO FILL THE PAGE */
-.advertisement {
-  height: 120px;
-  position: absolute;
-  top: 0;
-}
-
-.dummy {
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-  margin-top: 30px;
-  border: 5px solid white;
 }
 
 /* ||| ++++++ HERO 3 ++++++ */
@@ -356,7 +361,7 @@ footer {
 }
 
 .tabs__container img {
-  width: 100%;
+  max-width: 100%;
 }
 /* ++++++++++++++++++++++++++ */
 
@@ -376,17 +381,68 @@ footer {
 }
 
 /* |||||| HERO 5 ||||||| */
-#hero5 figure {
-  width: 500px;
-  height: 500px;
-}
 
 .hero5__img {
-  width: 1500px;
-  height: 500px;
+  max-width: 100%;
+  height: auto;
 }
+
 /* |||||||||||||||||||||| */
 
 /* ||||| HERO 6 |||||||*/
+.hero6 {
+  outline: 10px solid red;
+  margin-top: 100px;
+  width: 100%;
+  height: 220vh;
+  display: flex;
+  justify-content: row;
+  padding: var(--GENERAL-PADDING);
+}
+
+.hero6__container {
+  width: 70%;
+  height: 100%;
+  outline: 5px solid blue;
+}
+
+.advert {
+  width: 30%;
+  height: 1005;
+  outline: 2px solid green;
+}
+
+.hero6__div--item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  outline: 2px solid yellow;
+  height: 16.67%;
+  padding: var(--GENERAL-PADDING);
+}
+
+.img-container {
+  width: 28%;
+  outline: 2px solid brown;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.small-container {
+  padding: var(--HEADER-PD);
+  width: 70%;
+  outline: 5px solid pink;
+}
+
+.hero6__h1 {
+  font-size: 1.5rem;
+}
+
+.hero6__h4 {
+  color: var(--FADE);
+}
 
 /* ||||||||||||||||||||| */
